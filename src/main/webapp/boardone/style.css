@@ -1,0 +1,338 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	font-family: 'NeoDunggeunmoPro-Regular' !important;
+	font-size: 12pt !important;
+}
+
+body {
+	font-size: 11pt;
+	color: black;
+	line-height: 160%;
+}
+
+td {
+	font-size: 11pt;
+	color: black;
+	line-height: 160%;
+}
+
+select {
+	font-size: 11pt;
+	color: black;
+	line-height: 160%;
+}
+
+div {
+	font-size: 11pt;
+	color: black;
+	line-height: 160%;
+}
+
+form {
+	width: 500px;
+	font-size: 11pt;
+	color: black;
+	line-height: 160%;
+}
+
+textarea {
+	border-right:1px solid #999999;
+	border-top:1px solid #999999;
+	border-left:1px solid #999999;
+	border-bottom:1px solid #999999;
+	
+	font-size: 11pt;
+	color: black;
+	background-color:white;
+}
+
+input {
+	border-right:1px solid #999999;
+	border-top:1px solid #999999;
+	border-left:1px solid #999999;
+	border-bottom:1px solid #999999;
+	
+	font-size: 11pt;
+	color: black;
+	background-color:white;
+}
+
+a:link {text-decoration: none; color: #696969;}
+a:hover {text-decoration:yes; color: #66ccff;}
+a:visited {text-decoration: none; color: #330066;}
+
+
+
+/* 밑에서부터는 내가 수정한 거~~~~~~~~~~~~~~ */
+table {
+	table-layout:fixed;
+	white-space : nowrap;
+}
+
+td {
+	word-break:break-all;
+}
+
+/* pre 안 자동 줄바꿈 */
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+
+
+/* writeForm.jsp */
+.writeForm_form {
+	width:632px;
+	margin: 0 auto;
+}
+
+.writeForm_table1 {
+	width:632px;
+	margin: 0 auto;	
+}
+
+.writeForm_table2 {
+	padding: 15px;
+	border: 1px solid black;
+	width:600px;
+	margin: 0 auto;	
+}
+
+.writeForm_table3 {
+	width:632px;
+	margin: 0 auto;	
+}
+
+.writeForm_title {
+	text-align:center;
+}
+
+.writeForm_title p {
+	font-size: 26px !important;
+}
+
+.writeForm_table {
+	width:600px;
+	padding: 5px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.writeForm_tr input, textarea {
+	border: 0;
+}
+
+.writeForm_td {
+	border-bottom: 1px solid #eee;
+}
+
+.writeForm_buttons td input {
+	margin-top:10px;
+}
+
+
+/* list.jsp */
+.list_container {
+	margin: 0 auto;
+	width: 756px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	border: 1px solid black;
+	margin-top: 5px;
+}
+
+.list_form {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width: 726px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.list_title {
+	text-align:center;
+}
+
+.list_title p {
+	font-size: 26px !important;
+}
+
+.list_button_write {
+	width: 747px;
+	margin: 0 auto;
+	display:flex;
+	justify-content:space-between;
+}
+
+.list_button_write p {
+	margin: 0;
+}
+
+.list_table_01, .list_table_02, .list_table_03 {
+	width: 700px;
+	margin:0 auto;
+}
+
+.list_table_03_td {
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+
+.list_date, .list_ip {
+	border-bottom: 1px solid #eee;
+	font-size: 11px !important;
+}
+
+.list_bottom_div {
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.list_form2 {
+	display:flex;
+	justify-content: center;
+	margin: 0 auto;
+	padding-bottom:15px;
+}
+.list_form2 input {
+	margin: 0;
+}
+
+
+/* content.jsp */
+.content_form {
+	width:632px;
+	margin: 0 auto;
+}
+
+.content_div {
+	text-align:center;
+}
+
+.content_div p {
+	font-size: 26px !important;
+}
+
+.content_table {
+	padding: 15px;
+	border: 1px solid black;
+	width: 600px;
+}
+
+.content_table2 {
+	padding-top: 10px;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.content_table_tr {
+	width:100%;
+	height: 30px;
+}
+
+.content_table_td {
+	text-align: center;
+	width: 24.8%;
+}
+
+.content_table_td2 {
+	text-align: left;
+	width: 75%;
+	padding: 0px 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.content_table_td3 {
+	text-align: center;
+	width: 24.8%;
+	border-bottom: 1px solid #eee;
+}
+
+
+/* updateForm.jsp */
+.updateForm_form {
+	width:632px;
+	margin: 0 auto;
+}
+
+.updateForm_div {
+	text-align:center;
+}
+
+.updateForm_div p {
+	font-size: 26px !important;
+}
+
+.updateForm_table1 {
+	width:600px;
+	margin: 0 auto;	
+}
+
+.updateForm_table2 {
+	padding: 15px;
+	border: 1px solid black;
+	width:600px;
+	margin: 0 auto;	
+}
+
+.updateForm_table3 {
+	width:600px;
+	margin: 0 auto;	
+}
+
+.updateForm_title {
+	text-align:center;
+}
+
+.updateForm_title p {
+	font-size: 26px !important;
+}
+
+.updateForm_table {
+	width:600px;
+	padding: 5px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.updateForm_tr input, textarea {
+	border: 0;
+}
+
+.updateForm_td {
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+.updateForm_table3 {
+	padding-top: 5px;
+}
+
+
+/* deleteForm.jsp */
+.deleteForm_form {
+	padding: 50px 0;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.deleteForm_title {
+	font-size: 26px !important;
+	text-align: center;
+	margin-bottom: 20px;
+}
