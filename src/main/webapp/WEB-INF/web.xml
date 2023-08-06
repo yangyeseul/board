@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ServletProject</display-name>
+ 
+  <context-param>
+	<param-name>company</param-name>
+	<param-value>Global In</param-value>
+  </context-param>
+  
+  <context-param>
+	<param-name>manager</param-name>
+	<param-value>똘똘이킹</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>initParam</servlet-name>
+  	<servlet-class>com.sample.initParam</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>initParam</servlet-name>
+  	<url-pattern>/initParam</url-pattern> <!-- html 파일 form action 값이랑 같아아햠 -->
+  </servlet-mapping>
+
+<!-- 에러 코드 페이지 등록 -->
+<error-page>
+	<error-code>404</error-code>
+	<location>/error/error404.jsp</location>
+</error-page>
+
+<!--  <error-page>
+	<error-code>500</error-code>
+	<location>/error/error500.jsp</location>
+</error-page>-->
+
+<error-page>
+	<exception-type>java.lang.NullPointerException</exception-type>
+	<location>/error/errorNullPointer.jsp</location>
+</error-page>
+
+<session-config>
+	<session-timeout>1</session-timeout>
+</session-config>
+
+<!-- PieChartServlet -->
+<servlet>
+	<servlet-name>PieChartServlet</servlet-name>
+	<servlet-class>com.chart.PieChartServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>PieChartServlet</servlet-name>
+	<url-pattern>/PieChartServlet</url-pattern>
+</servlet-mapping>
+
+<!-- XYPlotServlet -->
+<servlet>
+	<servlet-name>XYPlotServlet</servlet-name>
+	<servlet-class>com.chart.XYPlotServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>XYPlotServlet</servlet-name>
+	<url-pattern>/XYPlotServlet</url-pattern>
+</servlet-mapping>
+
+
+<!-- MVC:cmd -->
+<servlet>
+	<servlet-name>mvctwo</servlet-name>
+	<servlet-class>mvc.control.ControlServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>mvctwo</servlet-name>
+	<url-pattern>*.do</url-pattern>
+</servlet-mapping>
+
+
+<!-- MVC:key -->
+<servlet>
+	<servlet-name>ConURI</servlet-name>
+	<servlet-class>mvc.Controller</servlet-class>
+	<init-param>
+		<param-name>propertyConfig</param-name>
+		<param-value>CommandMVC.properties</param-value>
+	</init-param>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>ConURI</servlet-name>
+	<url-pattern>*.dodo</url-pattern>
+</servlet-mapping>
+
+
+<!-- mvc 패키지 -->
+<servlet>
+	<servlet-name>MyControl</servlet-name>
+	<servlet-class>mvcmem.control.ControlServlet</servlet-class>
+	<init-param>
+		<param-name>propertyConfig</param-name>
+		<param-value>CommandMVC.properties</param-value>
+	</init-param>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>MyControl</servlet-name>
+	<url-pattern>*.mdo</url-pattern>
+</servlet-mapping>
+
+
+<!-- board 패키지 -->
+<servlet>
+	<servlet-name>Controller</servlet-name>
+	<servlet-class>board.controller.ControllerAction</servlet-class>
+	<init-param>
+		<param-name>proConfig</param-name>
+		<param-value>CommandPro.properties</param-value>
+	</init-param>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Controller</servlet-name>
+	<url-pattern>*.bdo</url-pattern>
+</servlet-mapping>
+
+
+<!-- tld 환경 잡기 -->
+<jsp-config>
+	<taglib>
+		<taglib-uri>/WEB-INF/tlds/el-functions.tld</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/el-functions.tld</taglib-location>
+	</taglib>
+</jsp-config>
+</web-app>
